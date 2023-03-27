@@ -13,9 +13,10 @@
     <h1 class="text-center mt-3">Quiz de Cibersegurança</h1>
     <div class="row">
       <div class="col-12 text-center">
-        <p>Preencha com seus dados e prossiga para realizar o Quiz.</p>
+        <p class="sub-text mb-0">Preencha com seus dados e prossiga para realizar o Quiz.</p>
+        <p class="current-step" style="display: none;">Pergunta <span>1 de 5</span></p>
       </div>
-      <div class="col-md-8 mx-auto">
+      <div id="welcome" class="col-md-8 mx-auto">
         <div class="card mt-5 p-5 bg-light">
           <form id="formRegister">
             <div class="mb-3">
@@ -54,29 +55,10 @@
           </form>
         </div>
       </div>  
-      <div class="col-md-8 mx-auto">
-        <form id="quiz-form">
+      <div id="quizContent" class="col-md-8 mx-auto" style="display: none;">
+        <form id="quizForm">
           <!-- Formulário para a primeira pergunta -->
-          <div class="form-group step">
-            <h3>1. <span id="question1"></span></h3>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="question1" id="question1a" value="a">
-              <label class="form-check-label" for="question1a" id="question1a-label"></label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="question1" id="question1b" value="b">
-              <label class="form-check-label" for="question1b" id="question1b-label"></label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="question1" id="question1c" value="c">
-              <label class="form-check-label" for="question1c" id="question1c-label"></label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="question1" id="question1d" value="d">
-              <label class="form-check-label" for="question1d" id="question1d-label"></label>
-            </div>
-            <button class="btn btn-primary btn-next" type="button">Próxima</button>
-          </div>
+          <button id="buttonNextStep" class="btn btn-primary btn-next" type="button">Próxima</button>
         </form>
       </div>
     </div>
