@@ -1,0 +1,57 @@
+{
+    "quiz": {
+        "title": "Quiz de Cibersegurança",
+        "questions": [
+            {
+                "question": "Qual é o método de ataque mais comum utilizado por hackers para obter acesso a sistemas protegidos?",
+                "options": [
+                    { "key": "a", "value": "Ataque de força bruta" },
+                    { "key": "b", "value": "Phishing" },
+                    { "key": "c", "value": "Malware" },
+                    { "key": "d", "value": "Engenharia social" }
+                ],
+                "answer": "b"
+            },
+            {
+                "question": "Qual é a melhor forma de evitar ser vítima de um ataque de phishing?",
+                "options": [
+                    { "key": "a", "value": "Usar antivírus" },
+                    { "key": "b", "value": "Manter o software atualizado" },
+                    { "key": "c", "value": "Ignorar e-mails suspeitos" },
+                    { "key": "d", "value": "Verificar cuidadosamente o remetente e o conteúdo do e-mail" }
+                ],
+                "answer": "d"
+            },
+            {
+                "question": "O que é um ransomware?",
+                "options": [
+                    { "key": "a", "value": "Um tipo de vírus que rouba informações pessoais" },
+                    { "key": "b", "value": "Um programa que torna o computador lento" },
+                    { "key": "c", "value": "Um tipo de ataque que nega o acesso a arquivos do sistema até que um resgate seja pago" },
+                    { "key": "d", "value": "Uma técnica de engenharia social" }
+                ],
+                "answer": "c"
+            },
+            {
+                "question": "Qual é a melhor prática para criar senhas seguras?",
+                "options": [
+                    { "key": "a", "value": "Usar a mesma senha para todas as contas" },
+                    { "key": "b", "value": "Usar senhas curtas e simples" },
+                    { "key": "c", "value": "Usar senhas longas e complexas com uma mistura de letras, números e símbolos" },
+                    { "key": "d", "value": "Compartilhar senhas com amigos e familiares" }
+                ],
+                "answer": "c"
+            },
+            {
+                "question": "O que é um firewall?",
+                "options": [
+                    { "key": "a", "value": "Um tipo de vírus" },
+                    { "key": "b", "value": "Um programa que verifica a segurança do sistema" },
+                    { "key": "c", "value": "Um tipo de ataque" },
+                    { "key": "d", "value": "Um dispositivo de segurança que controla o tráfego de rede" }
+                ],
+                "answer": "d"
+            }
+        ]
+    }
+}
