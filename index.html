@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de Cibersegurança</title>
+  <!-- Incluir arquivos do Bootstrap -->
+  <link rel="stylesheet" href="styles/bootstrap.min.css" />
+  
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mt-3">Quiz de Cibersegurança</h1>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p>Preencha com seus dados e prossiga para realizar o Quiz.</p>
+      </div>
+      <div class="col-md-8 mx-auto">
+        <div class="card mt-5 p-5 bg-light">
+          <form id="formRegister">
+            <div class="mb-3">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Seu nome</label>
+                    <input type="text" class="form-control" id="fieldName">
+                  </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Seu e-mail</label>
+                    <input type="email" class="form-control" id="fieldMail">
+                  </div>
+                </div>
+
+                <div class="col-8 col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Qual sua profissão?</label>
+                    <input type="text" class="form-control" id="fieldProfession">
+                  </div>
+                </div>
+
+                <div class="col-4 col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Qual sua idade?</label>
+                    <input type="number" min="1" class="form-control" id="fieldAge">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <button type="button" id="registerButton" class="btn btn-primary ms-auto d-table">Prosseguir</button>
+          </form>
+        </div>
+      </div>  
+      <div class="col-md-8 mx-auto">
+        <form id="quiz-form">
+          <!-- Formulário para a primeira pergunta -->
+          <div class="form-group step">
+            <h3>1. <span id="question1"></span></h3>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question1" id="question1a" value="a">
+              <label class="form-check-label" for="question1a" id="question1a-label"></label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question1" id="question1b" value="b">
+              <label class="form-check-label" for="question1b" id="question1b-label"></label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question1" id="question1c" value="c">
+              <label class="form-check-label" for="question1c" id="question1c-label"></label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question1" id="question1d" value="d">
+              <label class="form-check-label" for="question1d" id="question1d-label"></label>
+            </div>
+            <button class="btn btn-primary btn-next" type="button">Próxima</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incluir arquivos do Bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- <script src="js/jquery.min.js"></script> -->
+  <script src="js/functions.js"></script>
+  <!-- <script src="questions.json"></script> -->
+</body>
+</html>
