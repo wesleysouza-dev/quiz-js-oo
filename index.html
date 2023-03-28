@@ -1,73 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz de Cibersegurança</title>
-  <!-- Incluir arquivos do Bootstrap -->
-  <link rel="stylesheet" href="styles/bootstrap.min.css" />
-  
-</head>
-<body>
-  <div class="container">
-    <h1 class="text-center mt-3">Quiz de Cibersegurança</h1>
-    <div class="row">
-      <div class="col-12 text-center">
-        <p class="sub-text mb-0">Preencha com seus dados e prossiga para realizar o Quiz.</p>
-        <p class="current-step" style="display: none;">Pergunta <span>1 de 5</span></p>
-      </div>
-      <div id="welcome" class="col-md-8 mx-auto">
-        <div class="card mt-5 p-5 bg-light">
-          <form id="formRegister">
-            <div class="mb-3">
-              <div class="row">
-                <div class="col-12 col-lg-6">
-                  <div class="mb-3">
-                    <label class="form-label">Seu nome</label>
-                    <input type="text" class="form-control" id="fieldName">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz de Cibersegurança</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Incluir arquivos do Bootstrap -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-3">Quiz de Cibersegurança</h1>
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="sub-text mb-0">
+            Preencha com seus dados e prossiga para realizar o Quiz.
+          </p>
+          <p class="current-step" style="display: none">
+            <span id="showCurrentStep">Pergunta</span>
+          </p>
+        </div>
+        <div id="welcome" class="col-md-8 mx-auto">
+          <div class="card mt-5 p-5 bg-light">
+            <form id="formRegister">
+              <div class="mb-3">
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <div class="mb-3">
+                      <label class="form-label">Seu nome</label>
+                      <input type="text" class="form-control" id="fieldName" />
+                    </div>
                   </div>
-                </div>
 
-                <div class="col-12 col-lg-6">
-                  <div class="mb-3">
-                    <label class="form-label">Seu e-mail</label>
-                    <input type="email" class="form-control" id="fieldMail">
+                  <div class="col-12 col-lg-6">
+                    <div class="mb-3">
+                      <label class="form-label">Seu e-mail</label>
+                      <input type="email" class="form-control" id="fieldMail" />
+                    </div>
                   </div>
-                </div>
 
-                <div class="col-8 col-lg-6">
-                  <div class="mb-3">
-                    <label class="form-label">Qual sua profissão?</label>
-                    <input type="text" class="form-control" id="fieldProfession">
+                  <div class="col-8 col-lg-6">
+                    <div class="mb-3">
+                      <label class="form-label">Qual sua profissão?</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="fieldProfession"
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div class="col-4 col-lg-6">
-                  <div class="mb-3">
-                    <label class="form-label">Qual sua idade?</label>
-                    <input type="number" min="1" class="form-control" id="fieldAge">
+                  <div class="col-4 col-lg-6">
+                    <div class="mb-3">
+                      <label class="form-label">Qual sua idade?</label>
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        id="fieldAge"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-              
-            </div>
-            <button type="button" id="registerButton" class="btn btn-primary ms-auto d-table">Prosseguir</button>
-          </form>
+              <button
+                type="button"
+                id="registerButton"
+                class="btn btn-primary ms-auto d-table"
+              >
+                Prosseguir
+              </button>
+            </form>
+          </div>
         </div>
-      </div>  
-      <div id="quizContent" class="col-md-8 mx-auto" style="display: none;">
-        <form id="quizForm">
-          <!-- Formulário para a primeira pergunta -->
-          <button id="buttonNextStep" class="btn btn-primary btn-next" type="button">Próxima</button>
-        </form>
+
+        <div id="quizContent" class="col-md-8 mx-auto" style="display: none">
+          <div class="card mt-5 p-5 bg-light">
+            <form
+              id="quizForm"
+              class="d-flex flex-column justify-content-center"
+            >
+              <div
+                id="loader"
+                class="spinner-border mx-auto"
+                role="status"
+                style="display: none"
+              >
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <div id="questions"></div>
+              <button
+                id="buttonNextStep"
+                class="btn btn-primary btn-next mt-4 ms-auto"
+                type="button"
+                data-next=""
+              >
+                Próxima
+              </button>
+            </form>
+
+            <div
+              id="quizResults"
+              class="mx-auto text-center"
+              style="display: none"
+            >
+              <h5>Seus dados:</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <strong>Seu nome:</strong>
+                  <span id="playerName"></span>
+                </li>
+                <li>
+                  <strong>E-mail:</strong>
+                  <span id="playerMail"></span>
+                </li>
+              </ul>
+
+              <hr />
+
+              <h5>Resultado</h5>
+              <p id="resultDescription"></p>
+              <ul class="list-unstyled">
+                <li>
+                  <strong>Total de perguntas:</strong>
+                  <span id="totalQuestions"></span>
+                </li>
+                <li>
+                  <span class="badge bg-success"
+                    >Total de acertos: <span id="totalHits"></span
+                  ></span>
+                </li>
+                <li>
+                  <span class="badge bg-danger"
+                    >Total de erros:
+                    <span id="totalErrors"></span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8 mx-auto">
+          <button
+            id="resetData"
+            class="btn btn-danger mt-4 mx-auto"
+            type="button"
+            style="display: none"
+          >
+            Resetar dados e reiniciar Quiz
+          </button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Incluir arquivos do Bootstrap -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- <script src="js/jquery.min.js"></script> -->
-  <script src="js/functions.js"></script>
-  <!-- <script src="questions.json"></script> -->
-</body>
+    <!-- Incluir arquivos do Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script type="module" src="js/functions.js"></script>
+    <!-- <script src="questions.json"></script> -->
+  </body>
 </html>
