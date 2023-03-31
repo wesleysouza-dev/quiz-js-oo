@@ -2,20 +2,31 @@
 
 Quiz em Javascript utilizando um pouco de orientação de objetos. Projeto faz parte do PDI (Plano de Desenvolvimento Individual) na Redbelt Security.
 
+### Pré requisitos
+
+**Node js**
+
+Rodar os comandos:
+
+`npm install`
+
+`npm start`
+
+Por padrão ele rodará na porta 3000. Caso queira trocar, alterar arquivo package.json, chave script.
+
+Se tudo der certo você terá algo como: http://127.0.0.1:3000/
+
 ### Funcionamento do Quiz
 
 O quiz possui um conjunto de 5 perguntas de múltipla escolha com 4 opções cada. O usuário deve selecionar uma das opções e clicar no botão "Prosseguir" para avançar para a próxima pergunta. Ao final das perguntas, o usuário é apresentado com o resultado do quiz, incluindo o número de acertos e erros.
-
 
 ### Como usar o Quiz
 
 Para utilizar o quiz, basta acessar a página index.html no seu navegador.
 
-
 ### Como o Quiz foi implementado
 
 O projeto foi desenvolvido utilizando HTML, CSS e JavaScript. A parte do quiz em si foi implementada utilizando o paradigma de Orientação a Objetos do JavaScript.
-
 
 ### Classes
 
@@ -29,7 +40,7 @@ As classes utilizadas no projeto são:
 
 ### Arquivos principais projeto
 
-- **index.html:** arquivo principal do projeto, responsável por exibir o quiz no navegador.   
+- **index.html:** arquivo principal do projeto, responsável por exibir o quiz no navegador.
 
 - **js/Class:** diretório que contém as classes em Javascript
 
