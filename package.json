@@ -2,5 +2,21 @@
   "name": "quiz-js-oo",
   "lockfileVersion": 2,
   "requires": true,
-  "packages": {}
+  "packages": {},
+  "description": "Quiz em Javascript utilizando um pouco de orientação de objetos. Projeto faz parte do PDI (Plano de Desenvolvimento Individual) na Redbelt Security.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesleysouza-dev/quiz-js-oo.git"
+  },
+  "author": "Wesley Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesleysouza-dev/quiz-js-oo/issues"
+  },
+  "homepage": "https://github.com/wesleysouza-dev/quiz-js-oo#readme"
 }
