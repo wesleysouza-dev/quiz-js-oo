@@ -4,7 +4,7 @@ Quiz em Javascript utilizando um pouco de orientação de objetos. Projeto faz p
 
 ### Demo
 
-Caso queira ver uma demonstração online, acesse esse link: [wesleysouza.dev/projetos/redbelt/quiz-js-oo](https://wesleysouza.dev/projetos/redbelt/quiz-js-oo)
+Caso queira ver uma demonstração online, acesse esse link: [wesleysouza.dev/projetos/redbelt/quiz-js-oo](https://wesleysouza.dev/projetos/redbelt/quiz-js-oo){:target="\_blank"}
 
 ### Pré requisitos
 
